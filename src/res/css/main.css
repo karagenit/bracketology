@@ -34,3 +34,27 @@ hr {
     margin: auto;
     text-align: center;
 }
+
+::placeholder {
+    color: #f0f0f0;
+    opacity: 1;
+}
+
+.form-control {
+    background: transparent !important;
+    color: #f0f0f0;
+}
+
+input, select, textarea {
+    color: #f0f0f0 !important;
+}
+
+textarea:focus, input:focus {
+    color: #f0f0f0 !important;
+}
+
+.form-control::-webkit-input-placeholder { color: #f0f0f0; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: #f0f0f0; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: #f0f0f0; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: #f0f0f0; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: #f0f0f0; }  /* Microsoft Edge */

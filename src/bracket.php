@@ -4,7 +4,7 @@
   <body>
     <?php echo file_get_contents("./includes/header.html") ?>
 
-    <form action="submit.php">
+    <form action="submit.php" method="post">
       <div class="form-row">
         <h5>Name</h5>
       </div>
