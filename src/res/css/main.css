@@ -27,3 +27,9 @@ hr {
     margin-top: -10px;
     border-color: #f0f0f0;
 }
+
+.table {
+    max-width: 50% !important;
+    margin: auto;
+    text-align: center;
+}
