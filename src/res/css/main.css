@@ -1,8 +1,17 @@
 body {
     max-width: 900px;
     margin: auto;
+    margin-top: 10px;
+    background-image: url("../img/background.jpg");
+    color: #f0f0f0;
 }
 
 .navbar-custom {
     background: transparent;
+}
+
+.nav-item,
+.nav-link,
+.navbar-brand {
+    color: #f0f0f0 !important;
 }
