@@ -15,6 +15,6 @@
     <link rel="stylesheet" href="./res/css/main.css">
   </head>
   <body>
-    <h1>CHS Stats Bracketology</h1>
+    <?php echo file_get_contents("./includes/header.html") ?>
   </body>
 </html>
