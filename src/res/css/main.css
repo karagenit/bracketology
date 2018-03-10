@@ -3,6 +3,7 @@ body {
     margin: auto;
     margin-top: 10px;
     background-image: url("../img/background.jpg");
+    background-color: rgb(190, 130, 55);
     color: #f0f0f0;
 }
 
