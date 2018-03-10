@@ -7,7 +7,7 @@
 
     <meta name="description" content="CHS Stats Bracketology">
     <meta name="author" content="Caleb Smith">
-    <link rel="icon" href="./res/img/favicon.ico">
+    <link rel="icon" href="./res/img/favicon.png">
 
     <title>CHS Stats Bracketology</title>
 
