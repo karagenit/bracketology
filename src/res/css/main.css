@@ -14,4 +14,10 @@ body {
 .nav-link,
 .navbar-brand {
     color: #f0f0f0 !important;
+    font-size: 1.4rem;
+}
+
+h1 {
+    margin-bottom: 0.2rem;
+    text-align: center;
 }
