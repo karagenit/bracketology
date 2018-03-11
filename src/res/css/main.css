@@ -2,6 +2,8 @@ body {
     max-width: 900px;
     margin: auto;
     margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-image: url("../img/background.jpg");
     background-color: rgb(190, 130, 55);
     color: #f0f0f0;
@@ -24,6 +26,10 @@ h1 {
     text-align: center;
 }
 
+.form-row > h5 {
+    margin-left: 5px;
+}
+
 hr {
     margin-top: -10px;
     border-color: #f0f0f0;
@@ -40,9 +46,23 @@ hr {
     opacity: 1;
 }
 
+.btn-submit {
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
 .form-control {
     background: transparent !important;
-    color: #f0f0f0;
+    color: #f0f0f0 !important;
+}
+
+select {
+    background: transparent !important;
+}
+
+option {
+    background-color: #000;
 }
 
 input, select, textarea {
