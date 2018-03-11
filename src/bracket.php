@@ -23,7 +23,7 @@
         <div class="form-group col">
           <label>Gender</label>
           <select name="gender" class="custom-select">
-            <option selected>Choose...</option>
+            <option value="" selected>Choose...</option>
             <option value="M">Male</option>
             <option value="F">Female</option>
             <option value="O">Other</option>
@@ -38,7 +38,7 @@
         <div class="form-group col">
           <label>College Basketball Knowledge</label>
           <select name="knowledge" class="custom-select">
-            <option selected>Choose...</option>
+            <option value="" selected>Choose...</option>
             <option value="0">None</option>
             <option value="1">Little</option>
             <option value="2">Moderate</option>
