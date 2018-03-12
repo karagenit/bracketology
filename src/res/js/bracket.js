@@ -11,14 +11,19 @@ function bracketClick(team) {
     var nextRound = round + 1;
     var nextIndex = Math.floor(index/2);
 
-    // we've just picked someone to move on to Final Four round
-    if (nextRound === 4) {
-        region = 'F';
-    }
-
     var targetID = region + ' ' + nextRound + ' ' + nextIndex;
 
     // for whatever reason, $(#...) isn't working here...
     $(document.getElementById(targetID)).text(name);
     $(document.getElementById('I' + targetID)).val(name);
+
+    // if we've just picked a Final Four guy, also set him in the FF bracket
+    if (nextRound === 4) {
+        region = 'F';
+        var targetID = region + ' ' + nextRound + ' ' + nextIndex;
+
+        // for whatever reason, $(#...) isn't working here...
+        $(document.getElementById(targetID)).text(name);
+        $(document.getElementById('I' + targetID)).val(name);
+    }
 }
