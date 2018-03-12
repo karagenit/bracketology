@@ -42,6 +42,7 @@
 
     $html .= '<h3>Final Four</h3><hr>';
     $html .= '<div class="form-row">';
+    $html .= '<div class="form-group col"></div>'; 
     foreach (range(4,6) as $roundcnt) {
       $html .= '<div class="form-group col col-bracket">';
       foreach (range(0, (4/pow(2, $roundcnt-4)-1)) as $indexcnt) {
@@ -51,6 +52,7 @@
       }
       $html .= '</div>';
     }
+    $html .= '<div class="form-group col"></div>';
     $html .= '</div>';
 
     echo $html;
