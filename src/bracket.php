@@ -24,10 +24,21 @@
 
       $html .= '</div>';
 
-      // TODO all other cols
+      foreach (range(1,3) as $roundcnt) {
+        $html .= '<div class="form-group col">';
+        foreach (range(0, (16 / pow(2, $roundcnt))-1) as $indexcnt) {
+          $id = $region . ' ' . $roundcnt . ' ' . $indexcnt;
+          $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-success btn-block" onclick="bracketClick(this)">[None]</button>';
+          $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $botid . '" value="">';
+        }
+        $html .= '</div>';
+      }
+ 
       
       $html .= '</div>';
     }
+
+    // TODO final four bracket
 
     echo $html;
   }
