@@ -5,6 +5,7 @@
     $teamdata = json_decode(file_get_contents("./data/teams.json"));
 
     foreach ($teamdata as $region => $teams) {
+      $html .= '<h3>' . ucfirst($region) . '</h3><hr>';
       $html .= '<div class="form-row">';
       $html .= '<div class="form-group col col-bracket">';
       foreach (range(0,7) as $seedcnt) {
@@ -39,6 +40,7 @@
       $html .= '</div>';
     }
 
+    $html .= '<h3>Final Four</h3><hr>';
     $html .= '<div class="form-row">';
     foreach (range(4,6) as $roundcnt) {
       $html .= '<div class="form-group col col-bracket">';
