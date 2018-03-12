@@ -53,8 +53,14 @@
         </div>
       </div>
       <div class="form-row">
+        <button type="button" id="S 0 0" class="btn btn-success" onclick="bracketClick(this)">Gonzaga</button>
+        <button type="button" id="S 0 1" class="btn btn-success" onclick="bracketClick(this)">Purdue</button>
+        <button type="button" id="S 1 0" class="btn btn-success" onclick="bracketClick(this)">Pick...</button>
+      </div>
+      <div class="form-row">
         <button type="submit" class="btn btn-success btn-submit">Submit</button>
       </div>
     </form>
   </body>
+  <script src="./res/js/bracket.js"></script>
 </html>
