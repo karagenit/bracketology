@@ -16,10 +16,12 @@
         $topid = $region . " 0 " . (2 * $seedcnt);
         $botid = $region . " 0 " . (2 * $seedcnt + 1);
 
+        $html .= '<div style="margin-bottom:8px;">';
         $html .= '<button type="button" id="' . $topid .'" value="' . $topname . '" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">' . $topname . '</button>';
         $html .= '<input type="hidden" name="' . $topid . '" id="' . 'I' . $topid . '" value="' . $topname . '">';
         $html .= '<button type="button" id="' . $botid .'" value="' . $botname . '" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">' . $botname . '</button>';
         $html .= '<input type="hidden" name="' . $botid . '" id="' . 'I' . $botid . '" value="' . $botname . '">';
+        $html .= '</div>';
       }
 
       $html .= '</div>';
