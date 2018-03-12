@@ -8,9 +8,9 @@
       $html .= '<h3>' . ucfirst($region) . '</h3><hr>';
       $html .= '<div class="form-row">';
       $html .= '<div class="form-group col col-bracket">';
-      foreach (range(0,7) as $seedcnt) {
-        $topseed = 1 + $seedcnt;
-        $botseed = 16 - $seedcnt;
+      foreach ([1,8,5,4,6,3,7,2] as $seedcnt) {
+        $topseed = $seedcnt;
+        $botseed = 17 - $seedcnt;
 
         $topname = $teams->$topseed;
         $botname = $teams->$botseed;
