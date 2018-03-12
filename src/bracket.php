@@ -29,7 +29,7 @@
         foreach (range(0, (16 / pow(2, $roundcnt))-1) as $indexcnt) {
           $id = $region . ' ' . $roundcnt . ' ' . $indexcnt;
           $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';
-          $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $botid . '" value="">';
+          $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $id . '" value="">';
         }
         $html .= '</div>';
       }
@@ -43,7 +43,7 @@
       foreach (range(0, (4/pow(2, $roundcnt-4)-1)) as $indexcnt) {
         $id = 'F ' . $roundcnt . ' ' . $indexcnt;
         $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';
-        $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $botid . '" value="">';
+        $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $id . '" value="">';
       }
       $html .= '</div>';
     }
