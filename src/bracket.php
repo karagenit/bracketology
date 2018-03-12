@@ -1,3 +1,38 @@
+<?php
+  function generateBracket() {
+    $html = "";
+
+    $teamdata = json_decode(file_get_contents("./data/teams.json"));
+
+    foreach ($teamdata as $region => $teams) {
+      $html .= '<div class="form-row">';
+      $html .= '<div class="form-group col">';
+      foreach (range(0,7) as $seedcnt) {
+        $topseed = 1 + $seedcnt;
+        $botseed = 16 - $seedcnt;
+
+        $topname = $teams->$topseed;
+        $botname = $teams->$botseed;
+        $topid = $region . " 0 " . (2 * $seedcnt);
+        $botid = $region . " 0 " . (2 * $seedcnt + 1);
+
+        $html .= '<button type="button" id="' . $topid .'" value="' . $topname . '" class="btn btn-success btn-block" onclick="bracketClick(this)">' . $topname . '</button>';
+        $html .= '<input type="hidden" name="' . $topid . '" id="' . 'I' . $topid . '" value="' . $topname . '">';
+        $html .= '<button type="button" id="' . $botid .'" value="' . $botname . '" class="btn btn-success btn-block" onclick="bracketClick(this)">' . $botname . '</button>';
+        $html .= '<input type="hidden" name="' . $botid . '" id="' . 'I' . $botid . '" value="' . $botname . '">';
+      }
+
+      $html .= '</div>';
+
+      // TODO all other cols
+      
+      $html .= '</div>';
+    }
+
+    echo $html;
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <?php echo file_get_contents("./includes/head.html") ?>
@@ -52,11 +87,7 @@
           <input type="email" name="email" class="form-control" placeholder="you@example.com">
         </div>
       </div>
-      <div class="form-row">
-        <button type="button" id="S 0 0" class="btn btn-success" onclick="bracketClick(this)">Gonzaga</button>
-        <button type="button" id="S 0 1" class="btn btn-success" onclick="bracketClick(this)">Purdue</button>
-        <button type="button" id="S 1 0" class="btn btn-success" onclick="bracketClick(this)">Pick...</button>
-      </div>
+      <?php generateBracket() ?>
       <div class="form-row">
         <button type="submit" class="btn btn-success btn-submit">Submit</button>
       </div>

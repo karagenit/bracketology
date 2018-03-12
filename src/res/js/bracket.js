@@ -1,4 +1,5 @@
 // ID Structure: REGION ROUND INDEX e.g. S 0 0
+// Hidden Input Structure is the same but with a preceeding I
 
 function bracketClick(team) {
     var name = $(team).text();
@@ -19,4 +20,5 @@ function bracketClick(team) {
 
     // for whatever reason, $(#...) isn't working here...
     $(document.getElementById(targetID)).text(name);
+    $(document.getElementById('I' + targetID)).val(name);
 }
