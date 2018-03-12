@@ -16,9 +16,9 @@
         $topid = $region . " 0 " . (2 * $seedcnt);
         $botid = $region . " 0 " . (2 * $seedcnt + 1);
 
-        $html .= '<button type="button" id="' . $topid .'" value="' . $topname . '" class="btn btn-success btn-block" onclick="bracketClick(this)">' . $topname . '</button>';
+        $html .= '<button type="button" id="' . $topid .'" value="' . $topname . '" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">' . $topname . '</button>';
         $html .= '<input type="hidden" name="' . $topid . '" id="' . 'I' . $topid . '" value="' . $topname . '">';
-        $html .= '<button type="button" id="' . $botid .'" value="' . $botname . '" class="btn btn-success btn-block" onclick="bracketClick(this)">' . $botname . '</button>';
+        $html .= '<button type="button" id="' . $botid .'" value="' . $botname . '" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">' . $botname . '</button>';
         $html .= '<input type="hidden" name="' . $botid . '" id="' . 'I' . $botid . '" value="' . $botname . '">';
       }
 
@@ -28,7 +28,7 @@
         $html .= '<div class="form-group col">';
         foreach (range(0, (16 / pow(2, $roundcnt))-1) as $indexcnt) {
           $id = $region . ' ' . $roundcnt . ' ' . $indexcnt;
-          $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-success btn-block" onclick="bracketClick(this)">[None]</button>';
+          $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';
           $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $botid . '" value="">';
         }
         $html .= '</div>';
@@ -42,7 +42,7 @@
       $html .= '<div class="form-group col">';
       foreach (range(0, (4/pow(2, $roundcnt-4)-1)) as $indexcnt) {
         $id = 'F ' . $roundcnt . ' ' . $indexcnt;
-        $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-success btn-block" onclick="bracketClick(this)">[None]</button>';
+        $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';
         $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $botid . '" value="">';
       }
       $html .= '</div>';

@@ -52,6 +52,13 @@ hr {
     padding-right: 50px;
 }
 
+.btn-bracket {
+    margin: auto;
+    margin-top: 5px;
+    border-color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
+}
+
 .form-control {
     background: transparent !important;
     color: #f0f0f0 !important;
