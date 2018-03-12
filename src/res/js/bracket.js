@@ -19,8 +19,21 @@ function bracketClick(team) {
 
     // if we've just picked a Final Four guy, also set him in the FF bracket
     if (nextRound === 4) {
+
+        if (region === 'south') {
+            nextIndex = 0;
+        } else if (region === 'west') {
+            nextIndex = 1;
+        } else if (region === 'east') {
+            nextIndex = 2;
+        } else if (region === 'midwest') {
+            nextIndex = 3;
+        }
+
         region = 'F';
         var targetID = region + ' ' + nextRound + ' ' + nextIndex;
+
+        
 
         // for whatever reason, $(#...) isn't working here...
         $(document.getElementById(targetID)).text(name);
