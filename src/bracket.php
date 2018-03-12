@@ -8,14 +8,14 @@
       $html .= '<h3>' . ucfirst($region) . '</h3><hr>';
       $html .= '<div class="form-row">';
       $html .= '<div class="form-group col col-bracket">';
-      foreach ([1,8,5,4,6,3,7,2] as $seedcnt) {
+      foreach ([1,8,5,4,6,3,7,2] as $seedindex => $seedcnt) {
         $topseed = $seedcnt;
         $botseed = 17 - $seedcnt;
 
         $topname = $teams->$topseed;
         $botname = $teams->$botseed;
-        $topid = $region . " 0 " . (2 * $seedcnt);
-        $botid = $region . " 0 " . (2 * $seedcnt + 1);
+        $topid = $region . " 0 " . (2 * $seedindex);
+        $botid = $region . " 0 " . (2 * $seedindex + 1);
 
         $html .= '<div style="margin-bottom:8px;">';
         $html .= '<button type="button" id="' . $topid .'" value="' . $topname . '" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">' . $topname . '</button>';
