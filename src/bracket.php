@@ -6,7 +6,7 @@
 
     foreach ($teamdata as $region => $teams) {
       $html .= '<div class="form-row">';
-      $html .= '<div class="form-group col">';
+      $html .= '<div class="form-group col col-bracket">';
       foreach (range(0,7) as $seedcnt) {
         $topseed = 1 + $seedcnt;
         $botseed = 16 - $seedcnt;
@@ -25,7 +25,7 @@
       $html .= '</div>';
 
       foreach (range(1,4) as $roundcnt) {
-        $html .= '<div class="form-group col">';
+        $html .= '<div class="form-group col col-bracket">';
         foreach (range(0, (16 / pow(2, $roundcnt))-1) as $indexcnt) {
           $id = $region . ' ' . $roundcnt . ' ' . $indexcnt;
           $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';
@@ -39,7 +39,7 @@
 
     $html .= '<div class="form-row">';
     foreach (range(4,6) as $roundcnt) {
-      $html .= '<div class="form-group col">';
+      $html .= '<div class="form-group col col-bracket">';
       foreach (range(0, (4/pow(2, $roundcnt-4)-1)) as $indexcnt) {
         $id = 'F ' . $roundcnt . ' ' . $indexcnt;
         $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';

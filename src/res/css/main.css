@@ -1,7 +1,8 @@
 body {
-    max-width: 900px;
+    max-width: 1050px;
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
     background-image: url("../img/background.jpg");
@@ -54,9 +55,15 @@ hr {
 
 .btn-bracket {
     margin: auto;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     border-color: #f0f0f0 !important;
     color: #f0f0f0 !important;
+}
+
+.col-bracket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form-control {
