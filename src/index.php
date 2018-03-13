@@ -8,7 +8,7 @@
 
     <p>This data will be analyzed by students in AP Stats as a review assignment in preparation for their AP Exam. Please take a few minutes to submit your bracket by selecting the link above. You may view updated standings as the tournament progresses.</p>
 
-    <h5>Scoring</h5>
+    <h3>Scoring</h3>
     <table class="table table-bordered">
       <tr>
         <th>Round</th>
@@ -30,7 +30,8 @@
       </tr>
     </table>
 
-    <h5>Prior Winners</h5>
+    <br>
+    <h3>Prior Winners</h3>
     <table class="table">
       <tr>
         <th>Year</th>
