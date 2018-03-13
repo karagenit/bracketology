@@ -12,8 +12,8 @@
         $topseed = $seedcnt;
         $botseed = 17 - $seedcnt;
 
-        $topname = $teams->$topseed;
-        $botname = $teams->$botseed;
+        $topname = "<small>$topseed </small>" . $teams->$topseed;
+        $botname = "<small>$botseed </small>" . $teams->$botseed;
         $topid = $region . " 0 " . (2 * $seedindex);
         $botid = $region . " 0 " . (2 * $seedindex + 1);
 
