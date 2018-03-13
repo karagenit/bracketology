@@ -76,6 +76,10 @@ hr {
     justify-content: center;
 }
 
+.row-bracket {
+    min-width: 1200px;
+}
+
 .form-control {
     background: transparent !important;
     color: #f0f0f0 !important;

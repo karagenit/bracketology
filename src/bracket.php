@@ -6,7 +6,7 @@
 
     foreach ($teamdata as $region => $teams) {
       $html .= '<h3>' . ucfirst($region) . '</h3><hr>';
-      $html .= '<div class="form-row">';
+      $html .= '<div class="form-row row-bracket">';
       $html .= '<div class="form-group col col-bracket">';
       foreach ([1,8,5,4,6,3,7,2] as $seedindex => $seedcnt) {
         $topseed = $seedcnt;
@@ -41,7 +41,7 @@
     }
 
     $html .= '<h3>Final Four</h3><hr>';
-    $html .= '<div class="form-row">';
+    $html .= '<div class="form-row" style="min-width:800px;">';
     $html .= '<div class="form-group col"></div>'; 
     foreach (range(4,6) as $roundcnt) {
       $html .= '<div class="form-group col col-bracket">';
