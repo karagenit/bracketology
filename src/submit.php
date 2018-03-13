@@ -6,12 +6,10 @@
 
     <h3>
     <?php
-      // TODO read file or print current user
-      $db = new mysqli("localhost", "caleb", "", "bracket");
+      $db = new mysqli("localhost", posix_getpwuid(posix_getuid())["name"], "", "bracket");
       $stmt = $db->prepare("INSERT INTO brackets (firstname, lastname, age, gender, school, knowledge, email, bracket) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
       $stmt->bind_param("ssississ", $firstname, $lastname, $age, $gender, $school, $knowledge, $email, $bracket);
 
-      // TODO use POST fields - convert to #s, and grab all bracket info
       $firstname = $_POST["firstname"];
       $lastname = $_POST["lastname"];
       $age = intval($_POST["age"]);
