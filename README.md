@@ -2,7 +2,7 @@
 
 ## Setup
 
-Requires PHP 7 & MySQL.
+Requires PHP 7 & MySQL. Need your MySQL Password in `src/.db.token`, or an empty file if you're using `AUTH_SOCKET`.
 
 #### Data Import
 
