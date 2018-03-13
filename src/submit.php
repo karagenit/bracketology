@@ -6,7 +6,7 @@
 
     <h3>
     <?php
-      $db = new mysqli("localhost", posix_getpwuid(posix_getuid())["name"], file_get_contents(".db.token"), "bracket");
+      $db = new mysqli("localhost", file_get_contents(".db-user.token"), file_get_contents(".db.token"), "bracketology");
       $stmt = $db->prepare("INSERT INTO brackets (firstname, lastname, age, gender, school, knowledge, email, bracket) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
       $stmt->bind_param("ssississ", $firstname, $lastname, $age, $gender, $school, $knowledge, $email, $bracket);
 
