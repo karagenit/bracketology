@@ -2,11 +2,10 @@
 <html lang="en">
   <?php echo file_get_contents("./includes/head.html") ?>
   <body>
+    <?php echo file_get_contents("./includes/header.html") ?>
+
+    <h3>
     <?php
-      echo file_get_contents("./includes/header.html");
-
-      var_dump($_POST);
-
       // TODO read file or print current user
       $db = new mysqli("localhost", "caleb", "", "bracket");
       $stmt = $db->prepare("INSERT INTO brackets (firstname, lastname, age, gender, school, knowledge, email, bracket) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
@@ -29,9 +28,10 @@
       if ($success) {
         echo "Bracket Saved!";
       } else {
-        echo "Error saving...";
+        echo "Error Saving Bracket";
         // TODO print error info
       }
     ?>
+    </h3>
   </body>
 </html>
