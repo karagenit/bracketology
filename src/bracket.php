@@ -69,21 +69,21 @@
       <div class="form-row">
         <div class="form-group col">
           <label>Name</label>
-          <input type="text" name="firstname" class="form-control" placeholder="First">
+          <input type="text" name="firstname" class="form-control" placeholder="First" required="true">
         </div>
         <div class="form-group col">
           <label>Name</label>
-          <input type="text" name="lastname" class="form-control" placeholder="Last">
+          <input type="text" name="lastname" class="form-control" placeholder="Last" required="true">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col">
           <label>Age (years)</label>
-          <input type="number" name="age" class="form-control" step="1">
+          <input type="number" name="age" class="form-control" step="1" required="true">
         </div>
         <div class="form-group col">
           <label>Gender</label>
-          <select name="gender" class="custom-select">
+          <select name="gender" class="custom-select" required="true">
             <option value="" selected>Choose...</option>
             <option value="M">Male</option>
             <option value="F">Female</option>
@@ -94,11 +94,11 @@
       <div class="form-row">
         <div class="form-group col">
           <label>High School Affiliation</label>
-          <input type="text" name="school" class="form-control" placeholder="School Name">
+          <input type="text" name="school" class="form-control" placeholder="School Name" required="true">
         </div>
         <div class="form-group col">
           <label>College Basketball Knowledge</label>
-          <select name="knowledge" class="custom-select">
+          <select name="knowledge" class="custom-select" required="true">
             <option value="" selected>Choose...</option>
             <option value="0">None</option>
             <option value="1">Little</option>
