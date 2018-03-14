@@ -10,23 +10,22 @@ body {
     color: #f0f0f0;
 }
 
-.navbar-custom {
-    background: transparent;
-    margin-bottom: 0px;
+.header-row {
+    margin-bottom: 15px;
 }
 
-.nav-item,
-.nav-link {
-    color: #f0f0f0 !important;
-    font-size: 1.4rem;
-    margin-right: 5.25rem;
+.header-item,
+.header-item:hover {
+    color: #f0f0f0;
+    font-weight: bold;
 }
 
 h1 {
-    margin-bottom: 0rem !important;
+    margin-bottom: 5px; !important;
     text-align: center;
 }
 
+/* Unused? */
 .form-row > h5 {
     margin-left: 5px;
 }
