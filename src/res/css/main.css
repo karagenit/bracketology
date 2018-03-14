@@ -14,6 +14,10 @@ body {
     margin-bottom: 15px;
 }
 
+.header-col {
+    text-align: center;
+}
+
 .header-item,
 .header-item:hover {
     color: #f0f0f0;
