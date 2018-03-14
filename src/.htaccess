@@ -7,3 +7,6 @@ deny from all
 order allow,deny
 deny from all
 </files>
+
+RewriteEngine on
+ErrorDocument 404 /404.php
