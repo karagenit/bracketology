@@ -3,7 +3,7 @@
 
 function bracketClick(team) {
     var name = $(team).text();
-    var args = $(team).attr('id').split(' ');
+    var args = $(team).attr('id').split('_');
     var region = args[0];
     var round = parseInt(args[1]);
     var index = parseInt(args[2]);
@@ -11,7 +11,7 @@ function bracketClick(team) {
     var nextRound = round + 1;
     var nextIndex = Math.floor(index/2);
 
-    var targetID = region + ' ' + nextRound + ' ' + nextIndex;
+    var targetID = region + '_' + nextRound + '_' + nextIndex;
 
     // for whatever reason, $(#...) isn't working here...
     $(document.getElementById(targetID)).text(name);
@@ -31,9 +31,7 @@ function bracketClick(team) {
         }
 
         region = 'F';
-        var targetID = region + ' ' + nextRound + ' ' + nextIndex;
-
-        
+        var targetID = region + '_' + nextRound + '_' + nextIndex;
 
         // for whatever reason, $(#...) isn't working here...
         $(document.getElementById(targetID)).text(name);

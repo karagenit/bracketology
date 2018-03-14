@@ -14,8 +14,8 @@
 
         $topname = "<small>$topseed </small>" . $teams->$topseed;
         $botname = "<small>$botseed </small>" . $teams->$botseed;
-        $topid = $region . " 0 " . (2 * $seedindex);
-        $botid = $region . " 0 " . (2 * $seedindex + 1);
+        $topid = $region . "_0_" . (2 * $seedindex);
+        $botid = $region . "_0_" . (2 * $seedindex + 1);
 
         $html .= '<div style="margin-bottom:8px;">';
         $html .= '<button type="button" id="' . $topid .'" value="' . $topname . '" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">' . $topname . '</button>';
@@ -30,7 +30,7 @@
       foreach (range(1,4) as $roundcnt) {
         $html .= '<div class="form-group col col-bracket">';
         foreach (range(0, (16 / pow(2, $roundcnt))-1) as $indexcnt) {
-          $id = $region . ' ' . $roundcnt . ' ' . $indexcnt;
+          $id = $region . '_' . $roundcnt . '_' . $indexcnt;
           $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';
           $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $id . '" value="">';
         }
@@ -46,7 +46,7 @@
     foreach (range(4,6) as $roundcnt) {
       $html .= '<div class="form-group col col-bracket">';
       foreach (range(0, (4/pow(2, $roundcnt-4)-1)) as $indexcnt) {
-        $id = 'F ' . $roundcnt . ' ' . $indexcnt;
+        $id = 'F_' . $roundcnt . '_' . $indexcnt;
         $html .= '<button type="button" id="' . $id . '" value="" class="btn btn-outline-success btn-block btn-bracket" onclick="bracketClick(this)">[None]</button>';
         $html .= '<input type="hidden" name="' . $id . '" id="' . 'I' . $id . '" value="">';
       }
